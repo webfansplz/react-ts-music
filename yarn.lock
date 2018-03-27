@@ -47,11 +47,9 @@
   version "16.0.41"
   resolved "http://registry.npm.taobao.org/@types/react/download/@types/react-16.0.41.tgz#72146737f4d439dc95a53315de4bfb43ac8542ca"
 
-"@types/redux@^3.6.0":
-  version "3.6.0"
-  resolved "http://registry.npm.taobao.org/@types/redux/download/@types/redux-3.6.0.tgz#f1ebe1e5411518072e4fdfca5c76e16e74c1399a"
-  dependencies:
-    redux "*"
+"@types/redux@3.6.31":
+  version "3.6.31"
+  resolved "http://registry.npm.taobao.org/@types/redux/download/@types/redux-3.6.31.tgz#40eafa7575db36b912ce0059b85de98c205b0708"
 
 abbrev@1:
   version "1.1.1"
@@ -6074,7 +6072,11 @@ reduce-function-call@^1.0.1:
   dependencies:
     balanced-match "^0.4.2"
 
-redux@*, redux@^3.6.0, redux@^3.7.2:
+redux-thunk@^2.2.0:
+  version "2.2.0"
+  resolved "http://registry.npm.taobao.org/redux-thunk/download/redux-thunk-2.2.0.tgz#e615a16e16b47a19a515766133d1e3e99b7852e5"
+
+redux@^3.6.0, redux@^3.7.2:
   version "3.7.2"
   resolved "http://registry.npm.taobao.org/redux/download/redux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"
   dependencies:

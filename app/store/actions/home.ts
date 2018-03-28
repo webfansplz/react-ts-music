@@ -1,3 +1,4 @@
 import { createActions } from 'redux-actions';
 export const HOME = 'HOME';
-export const { home } = createActions('HOME');
+export const HOME2 = 'HOME2';
+export const { home, home2 } = createActions('HOME', 'HOME2');

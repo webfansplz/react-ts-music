@@ -2,10 +2,11 @@ import * as React from 'react';
 import { render } from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import reducer from '../store/index';
-import Routes from './router/index';
+import reducer from './store';
+import Routes from './router';
 import thunk from 'redux-thunk';
 const store = createStore(reducer, applyMiddleware(thunk));
+console.log(store.getState());
 class App extends React.Component {
   render() {
     return (

@@ -12,7 +12,7 @@ function assetsPath(_path) {
 module.exports = {
   entry: path.resolve(__dirname, '../app/app.tsx'),
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json']
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']
   },
   module: {
     rules: [

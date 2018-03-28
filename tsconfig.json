@@ -1,15 +1,16 @@
 {
   "compilerOptions": {
     "allowJs": true,
-    "module": "es6",
-    "target": "ESNext",
+    "module": "esnext",
+    "target": "esnext",
     "lib": ["es6", "dom"],
     "jsx": "react",
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,
     "sourceMap": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "experimentalDecorators": true
   },
   "exclude": ["node_modules", "build", "scripts", "acceptance-tests", "webpack", "jest", "src/setupTests.ts"]
 }

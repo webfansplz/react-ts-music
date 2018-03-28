@@ -6,7 +6,6 @@ import reducer from './store';
 import Routes from './router';
 import thunk from 'redux-thunk';
 const store = createStore(reducer, applyMiddleware(thunk));
-console.log(store.getState());
 class App extends React.Component {
   render() {
     return (

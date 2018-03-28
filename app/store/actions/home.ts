@@ -1,6 +1,3 @@
-export function home_req(txt?: string): any {
-  return {
-    type: 'home_req',
-    txt
-  };
-}
+import { createActions } from 'redux-actions';
+export const HOME = 'HOME';
+export const { home } = createActions('HOME');

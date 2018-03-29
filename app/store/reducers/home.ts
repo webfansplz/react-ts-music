@@ -1,16 +1,11 @@
 import { handleActions } from 'redux-actions';
 const state = {
-  text: 'webfansplz',
-  text2: ''
+  text: 'webfansplz'
 };
 const home = handleActions(
   {
-    ['HOME'](state, { payload }) {
+    ['ADD_TODO2'](state, { payload }) {
       return Object.assign({}, state, { text: payload });
-    },
-    ['HOME2'](state, { payload }) {
-      console.log(payload);
-      return Object.assign({}, state, { text2: payload });
     }
   },
   state

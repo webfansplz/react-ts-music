@@ -1,4 +1,2 @@
-import { createActions } from 'redux-actions';
-export const HOME = 'HOME';
-export const HOME2 = 'HOME2';
-export const { home, home2 } = createActions('HOME', 'HOME2');
+import { getBanners } from '../../services';
+export const addTodo2 = () => getBanners('ADD_TODO2');

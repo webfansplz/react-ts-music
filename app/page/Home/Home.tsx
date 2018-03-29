@@ -1,21 +1,20 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { home, home2 } from '../../store/actions/home';
-@(connect(({ home }: any) => ({ home })) as any)
+import { addTodo2 } from '../../store/actions/home';
+const mapStateToProps = ({ home }: any) => ({ home });
+const mapDispatchProps = (dispatch: any) => ({
+  addTodo2: dispatch(addTodo2())
+});
+@(connect(mapStateToProps, mapDispatchProps) as any)
 class Index extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
   }
   componentWillMount() {
-    this.props.dispatch(home('hello,world'));
-    this.props.dispatch(home2('webfansplz'));
+    this.props.addTodo2;
   }
   render() {
-    return (
-      <div>
-        {this.props.home.text}-{this.props.home.text2}
-      </div>
-    );
+    return <div>{this.props.home.text}</div>;
   }
 }
 export default Index;

@@ -14,7 +14,7 @@ class Index extends React.Component<any, any> {
     // this.props.addTodo2;
   }
   render() {
-    return <div>123</div>;
+    return <div>Login</div>;
   }
 }
 export default Index;

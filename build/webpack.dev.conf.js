@@ -60,7 +60,8 @@ const devConf = merge(baseConf, {
           {
             loader: 'css-loader',
             options: {
-              sourceMap: true
+              sourceMap: true,
+              modules: true
             }
           },
           {

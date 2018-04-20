@@ -15,20 +15,20 @@ const prodConf = merge(baseConf, {
   mode: 'production',
   output: {
     path: path.resolve(__dirname, '../public'),
-    publicPath: prodConfig.publicPath,
     filename: assetsPath('js/[name].[chunkhash].js'),
-    chunkFilename: assetsPath('js/[name].[chunkhash].js')
+    chunkFilename: assetsPath('js/[name].[chunkhash].js'),
+    publicPath: prodConfig.publicPath
   },
   devtool: prodConfig.devtoolType,
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'style-loader', 'css-loader', 'postcss-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
       },
       {
         test: /\.less$/,
-        use: [MiniCssExtractPlugin.loader, 'style-loader', 'css-loader', 'less-loader', 'postcss-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader', 'postcss-loader']
       }
     ]
   },
@@ -61,19 +61,29 @@ const prodConf = merge(baseConf, {
       name: 'manifest'
     },
     splitChunks: {
+      //缓存模块
       cacheGroups: {
         commons: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendor',
           chunks: 'all'
+        },
+        styles: {
+          name: 'app',
+          test: /\.less$/,
+          chunks: 'all',
+          enforce: true
         }
       }
     }
   },
   plugins: [
     new webpack.BannerPlugin('hey,react-cli'),
+    // set the following option to `true` if you want to extract CSS from
+    // codesplit chunks into this main css file as well.
+    // This will result in *all* of your app's CSS being loaded upfront.
     new MiniCssExtractPlugin({
-      filename: assetsPath('css/[name].[contenthash].css'),
+      filename: assetsPath('css/[name].css'),
       allChunks: false
     }),
     new OptimizeCSSPlugin(),
